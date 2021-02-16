@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyleSheet, Dimensions, Button, View } from 'react-native';
 
-export default () => {
+export default ({ onPresLeft, textLeft }) => {
     return (
         <View style={styles.Buttons}>
-            <Button title='lista'></Button>
+            <Button onPress={onPresLeft} title={textLeft}></Button>
             <Button title='mostrar/ocultar'></Button>
         </View>
     )
@@ -12,7 +12,7 @@ export default () => {
 
 const styles = StyleSheet.create({
     Buttons: {
-        flexDirection: 'row',
+        flexDirection: 'row',       
         justifyContent: 'center',
         alignItems: 'center',
     }
